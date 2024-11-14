@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background-color: darksalmon;
+    background: url(../img/bg.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+    padding-top: 5px;
+    margin-bottom: 15px;
+}
+
+.container {
+    /* min-height: 90vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.board {
+    background-color: aquamarine;
+    background: linear-gradient(#28af67, #faef59);
+    border: 2px solid;
+    height: 80vmin;
+    width: 80vmin;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+    border-radius: 15px;
+}
+
+
+.snakeHead {
+    background: linear-gradient(red, yellow);
+    transform: scale(1.1);
+    border: 2px solid black;
+    border-radius: 20%;
+}
+
+.snake {
+    background: linear-gradient(purple, #7a6c7a);
+    border: .25vmin solid black;
+    border-radius: 30%;
+}
+
+.food {
+    background: linear-gradient(red, purple);
+    border: .25vmin solid black;
+    border-radius: 50%;
+}
+
+#currentScore {
+    position: absolute;
+    left: 16%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#highScoreDiv {
+    position: absolute;
+    top: 5%;
+    left: 17%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .board {
+        height: 70vmin;
+        width: 70vmin;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 5px;
+    }
+
+    #currentScore {
+        position: static;
+    }
+    
+    #highScoreDiv {
+        position: static;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    #currentScore {
+        position: static;
+        margin-bottom: 40px;
+    }
+    .board {
+        height: 80vmin;
+        width: 80vmin;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px){
+    #currentScore {
+        position: static;
+        margin-bottom: 5px;
+    }
+    .board {
+        height: 70vmin;
+        width: 70vmin;
+    }
+} 

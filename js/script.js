@@ -44,7 +44,7 @@ let gameEngine = () => {
         gameOverSound.play()
         // musicSound.pause()
         moveDirection = { x: 0, y: 0 }
-        alert('Game ove. Press any key to Start Again!')
+        alert('Game over. Press any key to Start Again!')
         snakeArray = [{ row: 5, column: 15 }]
         // musicSound.load()
         // musicSound.play();
